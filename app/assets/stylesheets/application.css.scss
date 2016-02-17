@@ -23,6 +23,7 @@
 body {
   padding-top: 70px;
   padding-bottom: 30px;
+  background-size: cover;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -31,6 +32,24 @@ body {
   margin-bottom: 20px;
 }
 
-.theme-showcase > p > .btn {
-  margin: 5px 0;
+body.main {
+	background: url("http://i.imgur.com/gY8QU66.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #CC6540;
+  overflow: hidden;
+}
+
+.test_box {
+    background-color: black;
+    text-align: center;
+    opacity: 0.4;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 30%;
+    position: fixed;
+    top: 44%;
+    left: 34%;
 }

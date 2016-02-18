@@ -1,7 +1,11 @@
 class PortfolioController < ApplicationController
   def index
   	@now = GitHub.new
-  	@hello = @now.languages
+  	@portfolio = @now.portfolio
+  	@johda = @now.johda
+  	@highfive = @now.highfive
+  	@not_imessage = @now.not_imessage
+  	@maps = @now.maps
   	# binding.pry
   end
 end

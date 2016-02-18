@@ -1,11 +1,12 @@
 require 'open-uri'
 class GitHub
 	def initialize
-		@portfolio = "https://api.github.com/repos/akpersad/Portfolio/languages"
-		@johda = "https://api.github.com/repos/akpersad/Johda/languages"
-		@highfive = "https://api.github.com/repos/akpersad/HighFive/languages"
-		@not_imessage = "https://api.github.com/repos/akpersad/Not_iMessage/languages"
-		@maps = "https://api.github.com/repos/akpersad/google-maps-api-projects/languages"
+		key = ENV["github_key"]
+		@portfolio = "https://api.github.com/repos/akpersad/Portfolio/languages?access_token=#{key}"
+		@johda = "https://api.github.com/repos/akpersad/Johda/languages?access_token=#{key}"
+		@highfive = "https://api.github.com/repos/akpersad/HighFive/languages?access_token=#{key}"
+		@not_imessage = "https://api.github.com/repos/akpersad/Not_iMessage/languages?access_token=#{key}"
+		@maps = "https://api.github.com/repos/akpersad/google-maps-api-projects/languages?access_token=#{key}"
 		runner
 		# binding.pry
 	end

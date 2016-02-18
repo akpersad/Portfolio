@@ -87,10 +87,6 @@ li a:hover {
     background-color: #4CAF50;
 }
 
-/* Add a gray right border to all list items, except the last item (last-child) */
-li {
-}
-
 li:last-child {
     border-right: none;
 }

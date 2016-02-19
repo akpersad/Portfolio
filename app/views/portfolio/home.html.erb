@@ -24,37 +24,43 @@
 		</h5> -->
 </div>
 <div>
-		<canvas id="mycanvas" width="256" height="256">
+		<canvas id="portfolio_graph" width="50" height="50">
 		<script>
 			$(document).ready(function(){
-				var ctx = $("#mycanvas").get(0).getContext("2d");
+				var ctx = $("#portfolio_graph").get(0).getContext("2d");
 
 				//pie chart data
 				//sum of values = 360
 				var data = [
 					{
-						value: 4.6,
-						color: "#701516",
-						highlight: "red",
-						label: "Ruby"
-					},
-					{
-						value: 74,
-						color: "#F1E05A",
-						highlight: "yellow",
-						label: "JavaScript"
-					},
-					{
-						value: 19.2,
+						value: <%= @portfolio[1] %>,
 						color: "#563D7C",
 						highlight: "purple",
 						label: "CSS"
 					},
 					{
-						value: 2.2,
+						value: <%= @portfolio[3] %>,
+						color: "brown",
+						highlight: "brown",
+						label: "CoffeeScript"
+					},
+					{
+						value: <%= @portfolio[5] %>,
 						color: "#E44B23",
 						highlight: "orange",
 						label: "HTML"
+					},
+					{
+						value: <%= @portfolio[7] %>,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: <%= @portfolio[9] %>,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
 					}
 				];
 
@@ -65,10 +71,142 @@
 		</div>
 
 <div>
-		<canvas id="mycanvas1" width="256" height="256">
+		<canvas id="johda_graph" width="50" height="50">
 		<script>
 			$(document).ready(function(){
-				var ctx = $("#mycanvas1").get(0).getContext("2d");
+				var ctx = $("#johda_graph").get(0).getContext("2d");
+
+				//pie chart data
+				//sum of values = 360
+				var data1 = [
+					{
+						value: <%= @johda[1] %>,
+						color: "#563D7C",
+						highlight: "purple",
+						label: "CSS"
+					},
+					{
+						value: <%= @johda[3] %>,
+						color: "brown",
+						highlight: "brown",
+						label: "CoffeeScript"
+					},
+					{
+						value: <%= @johda[5] %>,
+						color: "#E44B23",
+						highlight: "orange",
+						label: "HTML"
+					},
+					{
+						value: <%= @johda[7] %>,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: <%= @johda[9] %>,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data1);
+			});
+		</script>
+		</div>
+<div>
+		<canvas id="highfive_graph" width="50" height="50">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#highfive_graph").get(0).getContext("2d");
+
+				//pie chart data
+				//sum of values = 360
+				var data1 = [
+					{
+						value: 2.5,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					},
+					{
+						value: 40.8,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: 26.6,
+						color: "#563D7C",
+						highlight: "purple",
+						label: "CSS"
+					},
+					{
+						value: 30.1,
+						color: "#E44B23",
+						highlight: "orange",
+						label: "HTML"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data1);
+			});
+		</script>
+		</div>
+<div>
+		<canvas id="not_graph" width="50" height="50">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#not_graph").get(0).getContext("2d");
+
+				//pie chart data
+				//sum of values = 360
+				var data1 = [
+					{{
+						value: <%= @not_imessage[1] %>,
+						color: "#563D7C",
+						highlight: "purple",
+						label: "CSS"
+					},
+					{
+						value: <%= @not_imessage[3] %>,
+						color: "brown",
+						highlight: "brown",
+						label: "CoffeeScript"
+					},
+					{
+						value: <%= @not_imessage[5] %>,
+						color: "#E44B23",
+						highlight: "orange",
+						label: "HTML"
+					},
+					{
+						value: <%= @not_imessage[7] %>,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: <%= @not_imessage[9] %>,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data1);
+			});
+		</script>
+		</div>
+<div>
+		<canvas id="maps_graph" width="50" height="50">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#maps_graph").get(0).getContext("2d");
 
 				//pie chart data
 				//sum of values = 360

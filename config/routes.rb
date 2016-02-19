@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
-  root to: 'portfolio#index'
+  root to: 'portfolio#home'
 
-  get 'portfolio/view'
+  get 'portfolio/about'
 
-  get 'portfolio/favorite'
+  get 'portfolio/projects'
+
+  get 'portfolio/contact'
 
   # get 'portfolio/results'
 

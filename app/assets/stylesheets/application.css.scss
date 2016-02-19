@@ -20,11 +20,7 @@
  */
 @import "bootstrap";
 /* Some Style from the Bootstrap Default Theme */
-body {
-  padding-top: 70px;
-  padding-bottom: 30px;
-  background-size: cover;
-}
+
 
 .theme-dropdown .dropdown-menu {
   position: static;
@@ -40,6 +36,8 @@ body.main {
 	background-size: cover;
 	color: #CC6540;
   overflow: hidden;
+  padding-top: 70px;
+  padding-bottom: 30px;
 }
 
 .test_box {

@@ -1,3 +1,8 @@
+<head>
+		<script src="app/assets/javascripts/jquery-2.1.4.min.js"></script>
+		<script src="app/assets/javascripts/Chart.js"></script>
+</head>
+
 <body class="main">
  
 <ul style="float:right;list-style-type:none;">
@@ -9,16 +14,100 @@
 
 
 	<div class="test_box">
-		<h5> 
-			<!-- <b>Portfolio</b>: <%=@portfolio%> <br/>
+		<!-- <h5> 
+			<b>Portfolio</b>: <%=@portfolio%> <br/>
 			<b>Johda</b>: <%=@johda%> <br/>
 			<b>HighFive</b>: <%=@highfive%> <br/>
 			<b>Not iMessage</b>: <%=@not_imessage%> <br/>
-			<b>Maps</b>: <%=@maps%> -->
-			Test
-		</h5>
+			<b>Maps</b>: <%=@maps%>
+			
+		</h5> -->
+</div>
+<div>
+		<canvas id="mycanvas" width="256" height="256">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#mycanvas").get(0).getContext("2d");
 
-	</div>
+				//pie chart data
+				//sum of values = 360
+				var data = [
+					{
+						value: 4.6,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					},
+					{
+						value: 74,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: 19.2,
+						color: "#563D7C",
+						highlight: "purple",
+						label: "CSS"
+					},
+					{
+						value: 2.2,
+						color: "#E44B23",
+						highlight: "orange",
+						label: "HTML"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data);
+			});
+		</script>
+		</div>
+
+<div>
+		<canvas id="mycanvas1" width="256" height="256">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#mycanvas1").get(0).getContext("2d");
+
+				//pie chart data
+				//sum of values = 360
+				var data1 = [
+					{
+						value: 2.5,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					},
+					{
+						value: 40.8,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: 26.6,
+						color: "#563D7C",
+						highlight: "purple",
+						label: "CSS"
+					},
+					{
+						value: 30.1,
+						color: "#E44B23",
+						highlight: "orange",
+						label: "HTML"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data1);
+			});
+		</script>
+		</div>
+
+
+
+	
 
 
 

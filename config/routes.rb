@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   root to: 'portfolio#home'
 
-  get 'portfolio/about'
+  get 'portfolio/about' => 'portfolio#about'
 
   get 'portfolio/projects'
 

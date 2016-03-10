@@ -17,3 +17,12 @@
 //= require bootstrap
 //= require_tree ../../../vendor/assets/javascripts/.
 //= require_tree .
+
+var terms = ["Welcome!", "Bem vinda!", "Mirë se vini!", "ברוכים הבאים!", "Bienvenue!", "欢迎", "¡Bienvenido!", "स्वागत छ!"];
+
+function rotateTerm() {
+  var ct = $("#rotate").data("term") || 0;
+  $("#rotate").data("term", ct == terms.length -1 ? 0 : ct + 1).text(terms[ct]).fadeIn()
+              .delay(3000).fadeOut(200, rotateTerm);
+}
+$(rotateTerm);

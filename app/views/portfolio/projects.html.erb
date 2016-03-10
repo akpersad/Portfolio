@@ -7,16 +7,281 @@
   <li id="nav-bar"><a href="/portfolio/contact">Contact</a></li>
 </ul>
 
-<div class="pusher">
-<h1>favorite</h1>
+<div class="projects">
+	<ul class="flex-container">
+	  <li class="flex-item">Johda</li>
+	  <li class="flex-item"><img src="http://i.imgur.com/Os64bmv.png" style="height: 100%;width: 100%"></li>
+	  <li class="flex-item1">
+		<canvas class="graph" id="johda_graph">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#johda_graph").get(0).getContext("2d");
+
+				var data1 = [
+					{
+						value: <%= @johda[1] %>,
+						color: "#563D7C",
+						highlight: "purple",
+						label: "CSS"
+					},
+					{
+						value: <%= @johda[3] %>,
+						color: "#FFF",
+						highlight: "brown",
+						label: "CoffeeScript"
+					},
+					{
+						value: <%= @johda[5] %>,
+						color: "#E44B23",
+						highlight: "orange",
+						label: "HTML"
+					},
+					{
+						value: <%= @johda[7] %>,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: <%= @johda[9] %>,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data1);
+			});
+		</script>
+		</li>
+
+	  <li class="flex-item">
+	  	<a href ="https://johda.herokuapp.com/" target="_blank">
+	  		<img src="http://uxrepo.com/static/icon-sets/mfg-labs/svg/link.svg" style="height: 30%;width: 30%;">
+  		</a>&nbsp;|&nbsp;
+  		<a href ="https://github.com/akpersad/johda" target="_blank">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
+  		</a>
+  	  </li>
+
+	</ul>
+</div>
+
+<div class="projects">
+	<ul class="flex-container">
+	  <li class="flex-item">To Do</li>
+	  <li class="flex-item"><img src="http://i.imgur.com/xM3sG8R.png" style="height: 100%;width: 100%"></li>
+	  <li class="flex-item1">
+		<canvas class="graph" id="todo_graph">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#todo_graph").get(0).getContext("2d");
+
+				var data1 = [
+					{
+						value: <%= @todo[1] %>,
+						color: "#563D7C",
+						highlight: "purple",
+						label: "CSS"
+					},
+					{
+						value: <%= @todo[3] %>,
+						color: "brown",
+						highlight: "brown",
+						label: "CoffeeScript"
+					},
+					{
+						value: <%= @todo[5] %>,
+						color: "#E44B23",
+						highlight: "orange",
+						label: "HTML"
+					},
+					{
+						value: <%= @todo[7] %>,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: <%= @todo[9] %>,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data1);
+			});
+		</script>
+		</li>
+	  
+	  <li class="flex-item">
+	  	<a href ="https://tdlister.herokuapp.com/" target="_blank">
+	  		<img src="http://uxrepo.com/static/icon-sets/mfg-labs/svg/link.svg" style="height: 30%;width: 30%;">
+  		</a>&nbsp;|&nbsp;
+  		<a href ="https://github.com/akpersad/ToDo" target="_blank">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
+  		</a>
+  	  </li>
+
+	</ul>
+</div>
+
+<div class="projects">
+	<ul class="flex-container">
+	  <li class="flex-item">High Five</li>
+	  <li class="flex-item"><img src="http://i.imgur.com/bwBlq4T.png" style="height: 100%;width: 100%"></li>
+	  <li class="flex-item1">
+		<canvas class="graph" id="highfive_graph">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#highfive_graph").get(0).getContext("2d");
+
+				var data1 = [
+					{
+						value: <%= @highfive[1] %>,
+						color: "#563D7C",
+						highlight: "purple",
+						label: "CSS"
+					},
+					{
+						value: <%= @highfive[3] %>,
+						color: "#E44B23",
+						highlight: "orange",
+						label: "HTML"
+					},
+					{
+						value: <%= @highfive[5] %>,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: <%= @highfive[7] %>,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data1);
+			});
+		</script>
+		</li>
+	  
+	  <li class="flex-item">
+	  	<a href ="https://high-5.herokuapp.com/" target="_blank">
+	  		<img src="http://uxrepo.com/static/icon-sets/mfg-labs/svg/link.svg" style="height: 30%;width: 30%;">
+  		</a>&nbsp;|&nbsp;
+  		<a href ="https://github.com/akpersad/highfive" target="_blank">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
+  		</a>
+  	  </li>
+
+	</ul>
+</div>
+
+<div class="projects">
+	<ul class="flex-container">
+	  <li class="flex-item">Not iMessage</li>
+	  <li class="flex-item"><img src="http://i.imgur.com/isofHbR.png" style="height: 100%;width: 100%"></li>
+	  <li class="flex-item1">
+		<canvas class="graph" id="not_graph">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#not_graph").get(0).getContext("2d");
+
+				var data1 = [
+					{
+						value: <%= @not_imessage[1] %>,
+						color: "#563D7C",
+						highlight: "purple",
+						label: "CSS"
+					},
+					{
+						value: <%= @not_imessage[3] %>,
+						color: "brown",
+						highlight: "brown",
+						label: "CoffeeScript"
+					},
+					{
+						value: <%= @not_imessage[5] %>,
+						color: "#E44B23",
+						highlight: "orange",
+						label: "HTML"
+					},
+					{
+						value: <%= @not_imessage[7] %>,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: <%= @not_imessage[9] %>,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data1);
+			});
+		</script>
+		</li>
+	  
+	  <li class="flex-item">
+	  	<a href ="http://not-imessage.herokuapp.com/" target="_blank">
+	  		<img src="http://uxrepo.com/static/icon-sets/mfg-labs/svg/link.svg" style="height: 30%;width: 30%;">
+  		</a>&nbsp;|&nbsp;
+  		<a href ="https://github.com/akpersad/not_imessage" target="_blank">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
+  		</a>
+  	  </li>
+
+	</ul>
+</div>
+
+<div class="projects">
+	<ul class="flex-container">
+	  <li class="flex-item2">Google Directions CLI</li>
+	  <li class="flex-item1">
+		<canvas class="graph" id="maps_graph">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#maps_graph").get(0).getContext("2d");
+
+				var data1 = [
+					{
+						value: <%=@maps[1]%>,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data1);
+			});
+		</script>
+		</li>
+	  
+	  <li class="flex-item">
+  		<a href ="https://github.com/akpersad/google-maps-api-projects" target="_blank">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
+  		</a>
+  	  </li>
+
+	</ul>
 </div>
 
 <div class="projects">
 	<ul class="flex-container">
 	  <li class="flex-item">Portfolio</li>
-	  <li class="flex-item">Screenshot</li>
-	  <li class="flex-item">Description</li>
-	  <li class="flex-item">
+	  <li class="flex-item1">
 		<canvas class="graph" id="portfolio_graph">
 		<script>
 			$(document).ready(function(){
@@ -61,243 +326,13 @@
 			</script>
 		</canvas>
 		</li>
-	  <li class="flex-item">Links</li>
-	</ul>
-</div>
-
-<div class="projects">
-	<ul class="flex-container">
-	  <li class="flex-item">Johda</li>
-	  <li class="flex-item">Screenshot</li>
-	  <li class="flex-item">Description</li>
+	  
 	  <li class="flex-item">
-		<canvas class="graph" id="johda_graph">
-		<script>
-			$(document).ready(function(){
-				var ctx = $("#johda_graph").get(0).getContext("2d");
+  		<a href ="https://github.com/akpersad/portfolio" target="_blank">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
+  		</a>
+  	  </li>
 
-				var data1 = [
-					{
-						value: <%= @johda[1] %>,
-						color: "#563D7C",
-						highlight: "purple",
-						label: "CSS"
-					},
-					{
-						value: <%= @johda[3] %>,
-						color: "#FFF",
-						highlight: "brown",
-						label: "CoffeeScript"
-					},
-					{
-						value: <%= @johda[5] %>,
-						color: "#E44B23",
-						highlight: "orange",
-						label: "HTML"
-					},
-					{
-						value: <%= @johda[7] %>,
-						color: "#F1E05A",
-						highlight: "yellow",
-						label: "JavaScript"
-					},
-					{
-						value: <%= @johda[9] %>,
-						color: "#701516",
-						highlight: "red",
-						label: "Ruby"
-					}
-				];
-
-				//draw
-				var piechart = new Chart(ctx).Pie(data1);
-			});
-		</script>
-		</li>
-	  <li class="flex-item">Links</li>
 	</ul>
 </div>
-
-<div class="projects">
-	<ul class="flex-container">
-	  <li class="flex-item">To Do</li>
-	  <li class="flex-item">Screenshot</li>
-	  <li class="flex-item">Description</li>
-	  <li class="flex-item">
-		<canvas class="graph" id="todo_graph">
-		<script>
-			$(document).ready(function(){
-				var ctx = $("#todo_graph").get(0).getContext("2d");
-
-				var data1 = [
-					{
-						value: <%= @todo[1] %>,
-						color: "#563D7C",
-						highlight: "purple",
-						label: "CSS"
-					},
-					{
-						value: <%= @todo[3] %>,
-						color: "brown",
-						highlight: "brown",
-						label: "CoffeeScript"
-					},
-					{
-						value: <%= @todo[5] %>,
-						color: "#E44B23",
-						highlight: "orange",
-						label: "HTML"
-					},
-					{
-						value: <%= @todo[7] %>,
-						color: "#F1E05A",
-						highlight: "yellow",
-						label: "JavaScript"
-					},
-					{
-						value: <%= @todo[9] %>,
-						color: "#701516",
-						highlight: "red",
-						label: "Ruby"
-					}
-				];
-
-				//draw
-				var piechart = new Chart(ctx).Pie(data1);
-			});
-		</script>
-		</li>
-	  <li class="flex-item">Links</li>
-	</ul>
-</div>
-
-<div class="projects">
-	<ul class="flex-container">
-	  <li class="flex-item">High Five</li>
-	  <li class="flex-item">Screenshot</li>
-	  <li class="flex-item">Description</li>
-	  <li class="flex-item">
-		<canvas class="graph" id="highfive_graph">
-		<script>
-			$(document).ready(function(){
-				var ctx = $("#highfive_graph").get(0).getContext("2d");
-
-				var data1 = [
-					{
-						value: <%= @highfive[1] %>,
-						color: "#563D7C",
-						highlight: "purple",
-						label: "CSS"
-					},
-					{
-						value: <%= @highfive[3] %>,
-						color: "#E44B23",
-						highlight: "orange",
-						label: "HTML"
-					},
-					{
-						value: <%= @highfive[5] %>,
-						color: "#F1E05A",
-						highlight: "yellow",
-						label: "JavaScript"
-					},
-					{
-						value: <%= @highfive[7] %>,
-						color: "#701516",
-						highlight: "red",
-						label: "Ruby"
-					}
-				];
-
-				//draw
-				var piechart = new Chart(ctx).Pie(data1);
-			});
-		</script>
-		</li>
-	  <li class="flex-item">Links</li>
-	</ul>
-</div>
-
-<div class="projects">
-	<ul class="flex-container">
-	  <li class="flex-item">Not iMessage</li>
-	  <li class="flex-item">Screenshot</li>
-	  <li class="flex-item">Description</li>
-	  <li class="flex-item">
-		<canvas class="graph" id="not_graph">
-		<script>
-			$(document).ready(function(){
-				var ctx = $("#not_graph").get(0).getContext("2d");
-
-				var data1 = [
-					{
-						value: <%= @not_imessage[1] %>,
-						color: "#563D7C",
-						highlight: "purple",
-						label: "CSS"
-					},
-					{
-						value: <%= @not_imessage[3] %>,
-						color: "brown",
-						highlight: "brown",
-						label: "CoffeeScript"
-					},
-					{
-						value: <%= @not_imessage[5] %>,
-						color: "#E44B23",
-						highlight: "orange",
-						label: "HTML"
-					},
-					{
-						value: <%= @not_imessage[7] %>,
-						color: "#F1E05A",
-						highlight: "yellow",
-						label: "JavaScript"
-					},
-					{
-						value: <%= @not_imessage[9] %>,
-						color: "#701516",
-						highlight: "red",
-						label: "Ruby"
-					}
-				];
-
-				//draw
-				var piechart = new Chart(ctx).Pie(data1);
-			});
-		</script>
-		</li>
-	  <li class="flex-item">Links</li>
-	</ul>
-</div>
-
-<div class="projects">
-	<ul class="flex-container">
-	  <li class="flex-item">Google Directions CLI</li>
-	  <li class="flex-item">Screenshot</li>
-	  <li class="flex-item">Description</li>
-	  <li class="flex-item">
-		<canvas class="graph" id="maps_graph">
-		<script>
-			$(document).ready(function(){
-				var ctx = $("#maps_graph").get(0).getContext("2d");
-
-				var data1 = [
-					{
-						value: <%=@maps[1]%>,
-						color: "#701516",
-						highlight: "red",
-						label: "Ruby"
-					}
-				];
-
-				//draw
-				var piechart = new Chart(ctx).Pie(data1);
-			});
-		</script>
-		</li>
-	  <li class="flex-item">Links</li>
-	</ul>
-</div>
-
 </body>

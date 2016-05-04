@@ -5,6 +5,7 @@ class PortfolioController < ApplicationController
   def projects
   	@now = GitHub.new
   	@portfolio = @now.portfolio
+    @spotify = @now.spotify
   	@johda = @now.johda
     @todo = @now.todo
   	@highfive = @now.highfive

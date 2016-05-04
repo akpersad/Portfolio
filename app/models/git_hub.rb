@@ -8,6 +8,7 @@ class GitHub
 		@highfive = "https://api.github.com/repos/akpersad/HighFive/languages?access_token=#{key}"
 		@not_imessage = "https://api.github.com/repos/akpersad/Not_iMessage/languages?access_token=#{key}"
 		@maps = "https://api.github.com/repos/akpersad/google-maps-api-projects/languages?access_token=#{key}"
+		@spotify = "https://api.github.com/repos/akpersad/spotify-test/languages?access_token=#{key}"
 		runner
 	end
 
@@ -18,6 +19,7 @@ class GitHub
 		@highfive_languages = JSON.load(open(@highfive))
 		@not_imessage_languages = JSON.load(open(@not_imessage))
 		@maps_languages = JSON.load(open(@maps))
+		@spotify_languages = JSON.load(open(@spotify))
 		# binding.pry
 	end
 
@@ -26,6 +28,13 @@ class GitHub
 		add = @portfolio_languages.values.inject(0){|sum,x| sum + x }
 		array = @portfolio_languages.sort.flatten
 		arr.push(array[0],((array[1].to_f/add)*100).round(2),array[2],((array[3].to_f/add)*100).round(2),array[4],((array[5].to_f/add)*100).round(2),array[6],((array[7].to_f/add)*100).round(2),array[8],((array[9].to_f/add)*100).round(2))
+	end
+
+	def spotify
+		arr = Array.new
+		add = @spotify_languages.values.inject(0){|sum,x| sum + x }
+		array = @spotify_languages.sort.flatten
+		arr.push(array[0],((array[1].to_f/add)*100).round(2),array[2],((array[3].to_f/add)*100).round(2),array[4],((array[5].to_f/add)*100).round(2),array[6],((array[7].to_f/add)*100).round(2))
 	end
 
 	def johda

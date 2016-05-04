@@ -58,9 +58,64 @@
 
 	  <li class="flex-item">
 	  	<a href ="https://johda.herokuapp.com/" target="_blank">
-	  		<img src="http://uxrepo.com/static/icon-sets/mfg-labs/svg/link.svg" style="height: 30%;width: 30%;">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Chain_link_icon.png" style="height: 30%;width: 30%;">
   		</a>&nbsp;|&nbsp;
   		<a href ="https://github.com/akpersad/johda" target="_blank">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
+  		</a>
+  	  </li>
+
+	</ul>
+</div>
+
+<div class="projects">
+	<ul class="flex-container">
+	  <li class="flex-item">Spotify Project</li>
+	  <li class="flex-item"><img src="http://i.imgur.com/FH71DVX.png" style="height: 100%;width: 100%"></li>
+	  <li class="flex-item1">
+		<canvas class="graph" id="spotify_graph">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#spotify_graph").get(0).getContext("2d");
+
+				var data1 = [
+					{
+						value: <%= @spotify[3] %>,
+						color: "#563D7C",
+						highlight: "purple",
+						label: "CSS"
+					},
+					{
+						value: <%= @spotify[5] %>,
+						color: "#E44B23",
+						highlight: "orange",
+						label: "HTML"
+					},
+					{
+						value: <%= @spotify[1] %>,
+						color: "#F1E05A",
+						highlight: "yellow",
+						label: "JavaScript"
+					},
+					{
+						value: <%= @spotify[7] %>,
+						color: "#701516",
+						highlight: "red",
+						label: "Ruby"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data1);
+			});
+		</script>
+		</li>
+
+	  <li class="flex-item">
+	  	<a href ="https://spot-test.herokuapp.com/" target="_blank">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Chain_link_icon.png" style="height: 30%;width: 30%;">
+  		</a>&nbsp;|&nbsp;
+  		<a href ="https://github.com/akpersad/spotify-test" target="_blank">
 	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
   		</a>
   	  </li>
@@ -119,7 +174,7 @@
 	  
 	  <li class="flex-item">
 	  	<a href ="https://tdlister.herokuapp.com/" target="_blank">
-	  		<img src="http://uxrepo.com/static/icon-sets/mfg-labs/svg/link.svg" style="height: 30%;width: 30%;">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Chain_link_icon.png" style="height: 30%;width: 30%;">
   		</a>&nbsp;|&nbsp;
   		<a href ="https://github.com/akpersad/ToDo" target="_blank">
 	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
@@ -174,7 +229,7 @@
 	  
 	  <li class="flex-item">
 	  	<a href ="https://high-5.herokuapp.com/" target="_blank">
-	  		<img src="http://uxrepo.com/static/icon-sets/mfg-labs/svg/link.svg" style="height: 30%;width: 30%;">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Chain_link_icon.png" style="height: 30%;width: 30%;">
   		</a>&nbsp;|&nbsp;
   		<a href ="https://github.com/akpersad/highfive" target="_blank">
 	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
@@ -235,7 +290,7 @@
 	  
 	  <li class="flex-item">
 	  	<a href ="http://not-imessage.herokuapp.com/" target="_blank">
-	  		<img src="http://uxrepo.com/static/icon-sets/mfg-labs/svg/link.svg" style="height: 30%;width: 30%;">
+	  		<img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Chain_link_icon.png" style="height: 30%;width: 30%;">
   		</a>&nbsp;|&nbsp;
   		<a href ="https://github.com/akpersad/not_imessage" target="_blank">
 	  		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2000px-Octicons-mark-github.svg.png" style="height: 30%;width: 30%;">
